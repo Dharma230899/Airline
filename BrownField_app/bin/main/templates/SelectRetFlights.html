@@ -1,0 +1,125 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<!-- Required meta tags -->
+    	<meta charset="utf-8" />
+    	<meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1" />
+ 		<link rel="stylesheet" href="index.css">
+    	<!-- Bootstrap CSS -->
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+          crossorigin="anonymous"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+       <!-- <script type="text/javascript">
+			function yesnoCheck() {
+			    if (document.getElementById('RoundT').checked) {
+			        document.getElementById('radioB').style.display = 'visible';
+			    } else {
+			        document.getElementById('radioB').style.display = 'hidden';
+			    }
+
+		</script>-->
+		<style>
+			body {
+  background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+		</style>
+		<title>Book Domestic & International Flights</title>
+	</head>
+	<body >	
+		<!-- Image and text -->
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color:black;">
+		  <a class="navbar-brand text-white" href="#">
+			  <img src="https://thumbs.dreamstime.com/b/airplane-plane-icon-isolated-black-background-airplane-plane-icon-isolated-black-background-simple-vector-logo-162761525.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
+			  <!--<img src="../static/plane.png" width="40" height="40" class="d-inline-block align-top" alt="">-->
+			  BrownField
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link text-white" th:href="@{/Search}">Search Flights <span class="sr-only"></span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link text-white" href="#">Book a Flight</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link text-white" href="#">Check In</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link text-white" href="#">Contact Us</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link text-white" href="#">About Us</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>	
+		
+			<form th:action="@{/Booking}" th:object="${}" method="post" style="margin-left: 2%">
+				<div class="container">
+					<div class="card border-0 shadow my-5" style="background-color: floralwhite;;">
+						<div class="card-body p-5">
+							<table class="table">
+							  <thead class="thead-dark">
+							    <tr>
+							      <th scope="col">Flight No</th>
+							      <th scope="col">From</th>
+							      <th scope="col">To</th>
+							      <th scope="col">Departure Date and Time</th>
+							      <th scope="col">Arrival Date and Time</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td th:tex="${from}">Delhi</td>
+							      <td>Mumbai</td>
+							      <td>10:30:00</td>
+							      <td>12:50:00</td>
+							      <td><button type="submit" style="background-color: #f4f3cd;" class=" btn btn-outline-dark col-xs-5 col-md-5 " data-toggle="button">Book Flight</button></td>
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td th:tex="${from}">Delhi</td>
+							      <td>Mumbai</td>
+							      <td>10:30:00</td>
+							      <td>12:50:00</td>
+							      <td><button type="submit" style="background-color: #f4f3cd;" class=" btn btn-outline-dark col-xs-5 col-md-5 " data-toggle="button">Book Flight</button></td>
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td th:tex="${from}">Delhi</td>
+							      <td>Mumbai</td>
+							      <td>10:30:00</td>
+							      <td>12:50:00</td>
+							      <td><button type="submit" style="background-color: #f4f3cd;"  class=" btn btn-outline-dark col-xs-5 col-md-5 " data-toggle="button">Book Flight</button></td>
+							    </tr>
+							  </tbody>
+							</table>
+	
+						</div>
+					</div>
+				</div>
+			</form>
+		<div class="footer" style=" position: fixed;
+		   left: 0;
+		   bottom: 0;
+		   width: 100%;
+		   height: 10%;
+		   background-color: black;
+		   color: white;
+		   text-align: center;">
+		  <p>&#169 	Copyright 2010-2023 by BrownField Airline. All Rights Reserved.</p>
+		</div>
+</body>
+</html>
